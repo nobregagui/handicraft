@@ -1,0 +1,30 @@
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: -webkit-fill-available;
+  z-index: 1;
+  gap: 40px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+}
+
+.menu-content a {
+  font-size: 22px;
+  text-decoration: none;
+  color: #711488;
+}
+
+.close-button {
+  place-self: end;
+}
+
+.authLogin {
+  display: flex;
+  gap: 15px;
+}

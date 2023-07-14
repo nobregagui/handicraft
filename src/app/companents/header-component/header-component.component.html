@@ -1,0 +1,52 @@
+<header>
+  <div class="header">
+    <div>
+      <img class="logo-img" src="../../../assets/logoDeitado.png" alt="" />
+    </div>
+    <div class="menu">
+      <a *ngFor="let name of menu" class="menu-list">
+        {{ name }}
+      </a>
+    </div>
+    <div class="contact">
+      <div style="display: flex; gap: 10px">
+        <img class="img-contact" src="../../../assets/contato.png" alt="" />
+        <p style="align-self: center">(11)98142-5377</p>
+      </div>
+      <img
+        *ngIf="authNameLogin === true; else loginAuth"
+        width="80px"
+        src="../../../assets/senha-de-loginBig.png"
+        alt=""
+      />
+      <ng-template #loginAuth>
+        <div class="authLogin">
+          <img src="../../../assets/user.png" alt="" />
+          <p>{{ wordLogin }}</p>
+        </div>
+      </ng-template>
+    </div>
+    <div class="menu-toggle">
+      <img (click)="toggleMenu()" src="../../../assets/cardapio.png" alt="" />
+    </div>
+    <div
+      *ngIf="menuOpen"
+      [ngClass]="{ 'menu-open': menuOpen, 'menu-closed': !menuOpen }"
+    >
+      <app-menu-toggle
+        [wordLogin]="wordLogin"
+        [menuOpen]="menuOpen"
+        [toggleMenu]="toggleMenu"
+        [menu]="menu"
+      ></app-menu-toggle>
+    </div>
+  </div>
+  <div class="content">
+    <p data-aos="zoom-in" data-aos-duration="1500">
+      {{ mensagem }}
+    </p>
+    <a href="" data-aos="zoom-in-up" data-aos-duration="1500"
+      >Venha nos conhecer</a
+    >
+  </div>
+</header>

@@ -1,0 +1,26 @@
+<div class="menu-content" *ngIf="menuOpen">
+  <img
+    class="close-button"
+    width="40px"
+    height="40px"
+    src="../../../assets/botao-fechar.png"
+    (click)="toggleMenu()"
+  />
+  <a *ngFor="let name of menu" class="menu-list">
+    {{ name }}
+  </a>
+  <div>
+    <img
+      *ngIf="authNameLogin === true; else loginAuth"
+      width="80px"
+      src="../../../assets/senha-de-loginBig.png"
+      alt=""
+    />
+    <ng-template #loginAuth>
+      <div class="authLogin">
+        <img width="40" height="40" src="../../../assets/user.png" alt="" />
+        <p>{{ wordLogin }}</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

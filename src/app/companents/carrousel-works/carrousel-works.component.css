@@ -1,0 +1,102 @@
+.section-works {
+  background-color: #F8F9FA;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-family: 'Anonymous Pro', monospace;
+
+}
+
+.title-section {
+  color: #9DCDE2;
+  text-align: center;
+  padding: 30px;
+  font-size: 42px;
+}
+
+.container-card {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 28px;
+  gap: 35px;
+
+}
+
+.container-infos {
+  max-width: 350px;
+  min-width: 350px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.container-infos h1 {
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.container-infos p {
+  color:
+    #8f8f8f;
+  font-family: 'Anonymous Pro', monospace;
+  margin: 0px;
+}
+
+.container-infos img {
+  max-width: 64px;
+}
+
+.container-infos a {
+  text-decoration: none;
+  background-color: #9b1ebb;
+  width: fit-content;
+  padding: 12px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  padding-left: 40px;
+}
+
+.img-scroll {
+  background-color: #9b1ebb;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 880px) {
+  .container-infos {
+    min-width: 290px;
+  }
+
+  .container-infos h1 {
+    font-size: 24px;
+  }
+
+  .container-infos p {
+    font-size: 14px;
+  }
+
+  .title-section {
+    font-size: 32px;
+  }
+
+  .container-card {
+    overflow-x: scroll;
+  }
+
+  .img-scroll {
+    width: 30px;
+    height: 30px;
+  }
+}

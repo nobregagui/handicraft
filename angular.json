@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test": {
+    "handicraft": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,21 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test",
+            "outputPath": "dist/handicraft",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css", "node_modules/aos/dist/aos.css"],
+            "scripts": ["node_modules/aos/dist/aos.js"]
           },
           "configurations": {
             "production": {
@@ -60,10 +53,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "test:build:production"
+              "browserTarget": "handicraft:build:production"
             },
             "development": {
-              "browserTarget": "test:build:development"
+              "browserTarget": "handicraft:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,28 +64,27 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test:build"
+            "browserTarget": "handicraft:build"
           }
         },
-        "test": {
+        "handicraft": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap",
+              "https://unpkg.com/aos@next/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": ["https://unpkg.com/aos@next/dist/aos.js"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7e26fb0d-578e-409c-9690-41ee3ee5c437"
   }
 }

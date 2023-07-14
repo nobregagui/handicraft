@@ -10,10 +10,10 @@
       "url": "http://localhost:4200/"
     },
     {
-      "name": "ng test",
+      "name": "ng handicraft",
       "type": "chrome",
       "request": "launch",
-      "preLaunchTask": "npm: test",
+      "preLaunchTask": "npm: handicraft",
       "url": "http://localhost:9876/debug.html"
     }
   ]

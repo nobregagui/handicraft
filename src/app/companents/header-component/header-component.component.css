@@ -1,0 +1,138 @@
+body {
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  border-bottom: 3px solid #9b1ebb;
+  background-color: #ffffff9d;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+header {
+  background-image: url("../../../assets/fundoHeader.png");
+  width: 100%;
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.137);
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.menu {
+  display: flex;
+  align-self: center;
+  gap: 50px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-family: 'Anonymous Pro', monospace;
+  color: #9b1ebb;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu a:hover {
+  color: #711688;
+}
+
+.contact {
+  display: flex;
+  gap: 55px;
+  align-items: center;
+}
+
+.logo-img-mobile {
+  display: none;
+}
+
+.img-contact {
+  width: 50px;
+  height: 46px;
+}
+
+.contact p {
+  color: #9b1ebb;
+  font-family: 'Anonymous Pro', monospace;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-height: 570px;
+  align-items: center;
+}
+
+.content p {
+  font-size: 50px;
+  color: #711488;
+  font-family: 'Anonymous Pro', monospace;
+  text-align: center;
+}
+
+.content a {
+  color: #fff;
+  background-color: #9b1ebb;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 22px;
+  font-family: 'Anonymous Pro', monospace;
+  border-radius: 15px;
+}
+
+.authLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.authLogin img {
+  align-self: center;
+}
+
+.menu-toggle {
+  align-self: center;
+  display: none;
+}
+
+
+@media only screen and (max-width: 1060px) {
+  .menu-list {
+    display: none;
+  }
+
+  .content p {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .content a {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: initial;
+  }
+}

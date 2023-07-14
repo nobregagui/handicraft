@@ -1,0 +1,37 @@
+<div class="section-works">
+  <h1 class="title-section" data-aos="zoom-in-up" data-aos-duration="1000">
+    {{ titleSection }}
+  </h1>
+  <div
+    data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine"
+    id="container-card"
+    class="container-card"
+  >
+    <div *ngFor="let items of cards" class="container-infos">
+      <img src="{{ items.urlImg }}" alt="" />
+      <h1>{{ items.title }}</h1>
+      <p>
+        {{ items.description }}
+      </p>
+      <a href="">{{ items.textButton }}</a>
+    </div>
+  </div>
+</div>
+<div data-aos="zoom-in-up" data-aos-duration="1000" class="buttons">
+  <img
+    class="img-scroll"
+    width="45px"
+    height="45px"
+    src="../../../assets/seta-esquerda.png"
+    (click)="scrollToLeft()"
+  />
+  <img
+    width="45px"
+    height="45px"
+    class="img-scroll"
+    src="../../../assets/seta-direita.png"
+    (click)="scrollToRigth()"
+  />
+</div>
